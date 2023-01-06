@@ -4,8 +4,8 @@ import json
 import requests
 
 veeam_url = 'https://192.168.15.30:9419/api/'
-APIUser = ".\Administrator"
-APIUserPassword = 'Elkhart0!'
+APIUser = "vbradminuser"
+APIUserPassword = 'vbradminuserpassword'
 
 #
 # request authentication token from the VBR Rest API
@@ -118,10 +118,6 @@ def addJob(authHeaders, backupRepoID, vCenter, vmName, vmID, jobName):
         print("Exception in addJob() - " + str(jobAddResponse.text))
         return False
 
-def xxx(a,b,c,d,e,f):
-    print('xxx('+a+', '+b+', '+c+', '+d+', '+e+', '+f+')')
-    return
-    
 #
 # retrieve certificate thumbprint from ESXi, vCenter server to avoid
 #
